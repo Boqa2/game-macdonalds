@@ -68,6 +68,9 @@
   .inset {
     width: 300px;
   }
+  .btn{
+    z-index: 3;
+  }
   .sonic {
     left: 255px;
     top: -180px;
@@ -215,5 +218,8 @@
   }
   .start {
     width: 330px;
+  }
+  .btn{
+    z-index: 3;
   }
 }
