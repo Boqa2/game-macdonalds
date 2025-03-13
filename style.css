@@ -1,0 +1,502 @@
+.v {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  background-color: #222;
+}
+.phone {
+  border-radius: 50px;
+  border: 8px solid black;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  color: #fff;
+}
+
+.horizontal {
+  width: 800px;
+  height: 340px;
+}
+.vertical {
+  width: 340px;
+  height: 667px;
+}
+.screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  padding-top: 40px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  background: url("/assets/SONIC\ 3\ BACKGROUND\ 1.png") center/cover no-repeat;
+}
+.screen > p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  width: 135px;
+  height: 30px;
+  background: black;
+  border-radius: 15px;
+}
+.h-notch {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 1;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 135px;
+  background: black;
+  border-radius: 15px;
+}
+.swipe {
+  width: 120px;
+  height: 6px;
+  background: #89898981;
+  position: absolute;
+  bottom: 7px;
+  border-radius: 5px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.start-game {
+  display: flex;
+  padding: 0 10px;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+  justify-content: space-between;
+}
+.border-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 5px;
+}
+.button-start {
+  width: 30%;
+  text-align: center;
+  padding: 8px 17px;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+  border-radius: 5px;
+  z-index: 99;
+  cursor: pointer;
+  background: rgb(255, 196, 35);
+}
+.button-start:active {
+  transform: translateY(3px);
+}
+.button-start:hover {
+  background: rgb(102, 102, 102);
+}
+.inset {
+  display: flex;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+  padding: 20px;
+  z-index: 1;
+  padding-bottom: 50px;
+  gap: 10px;
+  flex-direction: column;
+}
+.inset > p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0;
+  margin-top: 18px;
+}
+.sonic {
+  position: relative;
+}
+.skelet {
+  width: 175px;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  height: 230px;
+}
+
+.molniya {
+  position: absolute;
+  width: 150px;
+  top: 15px;
+  height: 80px;
+}
+.rigth {
+  right: 0;
+  top: 20px;
+  transform: rotate(170deg);
+}
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+}
+.glow {
+  position: absolute;
+  top: -245px;
+  z-index: 0;
+  left: -110px;
+  width: 600px;
+  height: 600px;
+}
+.arches {
+  width: 150px;
+  position: relative;
+  bottom: 5px;
+  left: -24px;
+  height: 185px;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 110px;
+  left: -10px;
+  flex-direction: column;
+  display: flex;
+  align-self: flex-end;
+}
+.logo > img {
+  width: 200px;
+  height: 90px;
+}
+.logo > .p {
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
+  font-family: sans-serif;
+  width: 200px;
+  position: relative;
+}
+.game {
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.timer > span {
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+.games {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(4, 80px);
+}
+.itmes-game:nth-child(10) {
+  grid-column: 2 / 3;
+}
+.itmes-game {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  position: relative;
+  perspective: 1000px; /* Глубина для 3D эффекта */
+  cursor: pointer;
+}
+.card-inner {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  top: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+
+.itmes-game.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.obrevers,
+.revers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.obrevers {
+  width: 80px;
+  top: 5px;
+  left: -5px;
+  height: 80px;
+  border-radius: 8px;
+}
+.revers {
+  width: 90px;
+  height: 90px;
+  transform: rotateY(180deg);
+}
+
+.result {
+  display: flex;
+  padding: 0 20px;
+  flex-direction: column;
+  position: relative;
+}
+.boxes {
+  width: 100%;
+  position: relative;
+}
+.rec.start {
+  top: -3px;
+}
+.rec {
+  position: absolute;
+  width: 300px;
+  height: 250px;
+}
+.rec.results {
+  top: 0;
+}
+.stok {
+  position: absolute;
+  width: 283px;
+  height: 233px;
+}
+.stok.results {
+  top: 8px;
+  left: 8px;
+}
+.contnent {
+  position: absolute;
+  background: #ffffff00;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+.end {
+  font-size: 9px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.paragraf {
+  margin: 0;
+  font-weight: 900;
+  text-align: end;
+}
+.scores {
+  line-height: 1.2;
+}
+.text-score {
+  position: relative;
+}
+.score {
+  font-size: 48px;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+.paragraf:nth-child(1) {
+  font-size: 30px;
+  font-family: sans-serif;
+}
+.paragraf:nth-child(2) {
+  font-size: 21px;
+  font-family: sans-serif;
+}
+.button {
+  display: flex;
+  gap: 5px;
+}
+.btn {
+  padding: 7px 15px;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 3px;
+  font-weight: 900;
+  font-family: sans-serif;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+.btn:nth-child(1) {
+  background: rgb(255, 196, 35);
+  color: black;
+}
+.btn:nth-child(2) {
+  background: rgb(219, 0, 7);
+  color: rgb(255, 196, 35);
+}
+.btn:active {
+  transform: translateY(3px);
+}
+.btn:hover {
+  background: rgb(102, 102, 102);
+}
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  line-height: 1;
+  position: relative;
+}
+.content-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.happy {
+  position: relative;
+}
+.box-happy {
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  z-index: 1;
+}
+.parchment {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+}
+.icons {
+  position: relative;
+  top: 340px;
+  z-index: 1;
+}
+.imegs {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+.imegs:nth-child(1) {
+  left: 5px;
+  z-index: 10;
+}
+.imegs:nth-child(2) {
+  left: 34px;
+  width: 52px;
+  height: 52px;
+  z-index: 9;
+}
+.imegs:nth-child(3) {
+  left: 70px;
+  width: 52px;
+  height: 48px;
+  top: 3px;
+  z-index: 8;
+}
+.imegs:nth-child(4) {
+  left: 105px;
+  width: 50px;
+  height: 48px;
+  top: 3px;
+  z-index: 7;
+}
+.imegs:nth-child(5) {
+  left: 138px;
+  width: 52px;
+  height: 52px;
+  top: 1px;
+  z-index: 6;
+}
+.imegs:nth-child(6) {
+  left: 174px;
+  width: 48px;
+  height: 46px;
+  top: 5px;
+  z-index: 5;
+}
+.imegs:nth-child(7) {
+  left: 205px;
+  width: 50px;
+  height: 48px;
+  top: 4px;
+  z-index: 4;
+}
+.imegs:nth-child(8) {
+  left: 234px;
+  width: 48px;
+  height: 49px;
+  top: 3px;
+  z-index: 3;
+}
+.grom {
+  position: absolute;
+}
+.text-anime {
+  transition: all 1s ease;
+}
+
+.forAnime {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  animation: leftText 12s infinite;
+}
+
+.forAnime:nth-child(1) {
+  animation-delay: 0;
+  left: 50px;
+}
+.forAnime:nth-child(2) {
+  animation-delay: 4s;
+  
+}
+.forAnime:nth-child(3) {
+  animation-delay: 8s;
+  left: 45px;
+}
+
+@keyframes leftText {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
