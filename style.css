@@ -33,7 +33,7 @@
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
-  background: url("/assets/SONIC\ 3\ BACKGROUND\ 1.png") center/cover no-repeat;
+  background: url("../assets/SONIC\ 3\ BACKGROUND\ 1.png") center/cover no-repeat;
 }
 .screen > p {
   text-align: center;
