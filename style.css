@@ -33,7 +33,7 @@
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
-  background: url("../assets/SONIC\ 3\ BACKGROUND\ 1.png") center/cover no-repeat;
+  background: url("assets/SONIC\ 3\ BACKGROUND\ 1.png") center/cover no-repeat;
 }
 .screen > p {
   text-align: center;
@@ -194,8 +194,14 @@
   width: 200px;
   position: relative;
 }
+.timer{
+  font-size: 37px;
+                margin-bottom: -20px;
+                margin: 0;
+                font-weight: 900;
+}
 .game {
-  display: flex;
+  display: none;
   margin-left: 10px;
   align-items: center;
   justify-content: center;
@@ -264,7 +270,7 @@
 }
 
 .result {
-  display: flex;
+  display: none;
   padding: 0 20px;
   flex-direction: column;
   position: relative;
@@ -281,7 +287,7 @@
   width: 300px;
   height: 250px;
 }
-.rec.results {
+.respons {
   top: 0;
 }
 .stok {
@@ -289,7 +295,7 @@
   width: 283px;
   height: 233px;
 }
-.stok.results {
+.results {
   top: 8px;
   left: 8px;
 }

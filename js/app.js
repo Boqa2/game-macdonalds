@@ -46,8 +46,8 @@ function startGame() {
     game.innerHTML += `
       <div class="itmes-game flipped">
         <div class="card-inner">
-          <img class="revers" src="/assets/sonic/Card - Reverse.png" alt="">
-          <img class="obrevers" src="/assets/card/${card}" alt="">
+          <img class="revers" src="assets/sonic/Card - Reverse.png" alt="">
+          <img class="obrevers" src="assets/card/${card}" alt="">
         </div>
       </div>`;
   });
@@ -130,3 +130,4 @@ playAgain.addEventListener("click", () => {
     startGame();
   },500)
 });
+

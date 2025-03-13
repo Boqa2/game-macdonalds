@@ -1,18 +1,222 @@
-@media (max-width: 355px) {
-  .v {
-    position: fixed;
+@media (max-height: 400px) {
+  * {
+    cursor: none;
+  }
+  .screen {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-align: end;
+  }
+  .phone {
+    width: 800px;
+    height: 340px;
+    position: relative;
+  }
+  .notch {
+    width: 33px;
+    height: 135px;
+    left: 94%;
+    z-index: 5;
+    transform: translateX(94%);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .screen > p {
+    text-align: end;
+    padding-right: 20%;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .border-box {
+    width: 50%;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  .rigth {
+    z-index: -1;
+  }
+  .start-game {
+    justify-content: center;
+    align-items: center;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .arches {
+    top: 130px;
+    width: 180px;
+  }
+  .logo {
+    top: -200px;
+    left: 20px;
+  }
+  .rec {
+    width: 340px;
+    height: 200px;
+  }
+  .stok {
+    width: 320px;
+    height: 180px;
+  }
+  .inset {
+    width: 300px;
+  }
+  .sonic {
+    left: 255px;
+    top: -180px;
+  }
+  .inset > p {
+    padding: 0 30px;
+  }
+  .games {
+    grid-template-columns: repeat(5, 90px);
+    grid-template-rows: repeat(2, 90px);
+    margin-left: 150px;
+    margin-top: 30px;
+  }
+  .itmes-game {
+    width: 90px;
+    height: 90px;
+  }
+  .itmes-game:nth-child(10) {
+    grid-column: 5;
+  }
+  .timer {
+    position: absolute;
+    right: 50px;
+    top: 9px;
+  }
+  .card-inner {
+    width: 90px;
+    height: 90px;
+  }
+  .revers {
+    width: 100px;
+    height: 100px;
+  }
+  .obrevers {
+    width: 90px;
+    height: 90px;
+  }
+  .boxes {
+    display: flex;
+    justify-content: center;
+  }
+  .results {
+    left: 205px;
+    width: 350px;
+    height: 200px;
+  }
+  .respons {
+    width: 370px;
+    height: 220px;
+  }
+  .contnent {
+    padding-top: 24px;
+  }
+  .box-happy {
+    left: 0;
+    right: 55px;
+    top: 80px;
+  }
+  .btn {
+    padding: 10px 20px;
+  }
+  .icons {
+    top: 190px;
+    left: 230px;
+  }
+}
+@media (max-width: 800px) {
+  .phone {
+    border-radius: 0;
+    border: 0;
+    position: relative;
+  }
+  .screen {
+    border-radius: 0;
+  }
+  .notch {
+    display: none;
+  }
+  .swipe {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  * {
+    cursor: none;
+  }
+  body{
+    height: 100%;
   }
   .phone {
     border-radius: 0;
     border: 0;
+
+    height: 100%;
+    position: fixed;
   }
-  .vertical{
+  .vertical {
     width: 100%;
   }
-  .notch{
+  .notch {
     display: none;
   }
-  .swipe{
+  .swipe {
     display: none;
+  }
+  .screen {
+    cursor: none;
+    padding: 0;
+    padding-top: 37px;
+    border-radius: 0;
+  }
+  .inset {
+    padding: 20px 40px;
+    padding-bottom: 50px;
+  }
+  .inset > p {
+    font-size: 25px;
+    padding: 0 30px;
+  }
+  .glow{
+    left: -30px;
+  }
+  .left {
+    left: 40px;
+  }
+  .rigth {
+    right: 50px;
+  }
+  .skelet{
+    width: 220px;
+    height: 300px;
+  }
+  .arches {
+    top: 13px;
+    left: -30px;
+    width: 240px;
+    height: 230px;
+  }
+  .logo {
+    left: 70px;
+  }
+  .boxes {
+    margin-left: 35px;
+  }
+  .box-happy {
+    left: 70px;
+  }
+  .icons {
+    left: 30px;
+  }
+  .res-start {
+    width: 380px;
+  }
+  .start {
+    width: 400px;
   }
 }
